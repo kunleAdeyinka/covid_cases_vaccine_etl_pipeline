@@ -80,7 +80,7 @@ def main(src, dest, local_src, validate_data, options):
 
     # LOAD DATA
     logger.info(f"Loading data to bit.io...")
-    print('PG_CONN_STRING ==', os.getenv('PG_CONN_STRING'))
+    logger.info('PG_CONN_STRING ==', os.getenv('PG_CONN_STRING'))
     load.to_table(df, dest, os.getenv('PG_CONN_STRING'))
     logger.info(f"Data loaded to bit.io.")
 
